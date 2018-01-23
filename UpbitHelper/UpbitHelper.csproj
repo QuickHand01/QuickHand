@@ -255,9 +255,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="chromedriver.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Resource Include="quickhand.ico" />
     <None Include="Connected Services\QuickHandService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
