@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PresentationTheme.Aero</name>
+    </assembly>
+    <members>
+        <member name="T:PresentationTheme.Aero.AeroTheme">
+            <summary>
+              Provides convenience helpers for the default <see cref="T:PresentationTheme.Aero.AeroThemePolicy"/>.
+              The theme will update automatically if the system theme changes.
+            </summary>
+            <remarks>
+              To use the theme, call <see cref="M:PresentationTheme.Aero.AeroTheme.SetAsCurrentTheme"/> and revert it
+              using <see cref="M:PresentationTheme.Aero.AeroTheme.RemoveAsCurrentTheme"/>.
+            </remarks>
+            <seealso cref="T:PresentationTheme.Aero.AeroThemePolicy"/>
+            <seealso cref="M:PresentationTheme.Aero.AeroTheme.SetAsCurrentTheme"/>
+        </member>
+        <member name="E:PresentationTheme.Aero.AeroTheme.ResourceUriChanged">
+            <summary>
+              Occurs when the <see cref="P:PresentationTheme.Aero.AeroTheme.ResourceUri"/> may have changed after a
+              <see cref="E:PresentationTheme.Aero.ThemeManager.ThemeChanged"/> event.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.Aero.AeroTheme.ResourceUri">
+            <summary>
+              Gets the Pack <see cref="T:System.Uri"/> for current theme resources. The
+              resource URI will change if the system theme changes.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.Aero.AeroTheme.SetAsCurrentTheme">
+            <summary>
+              Sets the current theme to Aero using the default
+              <see cref="T:PresentationTheme.Aero.AeroThemePolicy"/>. The theme will update automatically
+              if the system theme changes.
+            </summary>
+            <returns>
+              <see langword="true"/> on success; otherwise <see langword="false"/>.
+            </returns>
+            <seealso cref="T:PresentationTheme.Aero.AeroThemePolicy"/>
+        </member>
+        <member name="M:PresentationTheme.Aero.AeroTheme.RemoveAsCurrentTheme">
+            <summary>
+              Removes the Aero theme, falling back to the default theme.
+            </summary>
+            <returns>
+              <see langword="true"/> on success; otherwise <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:PresentationTheme.Aero.AeroThemePolicy">
+            <summary>
+              Provides the default Aero theme policy which chooses the appropriate
+              theme resources depending on the current system theme and Windows version.
+            </summary>
+            <remarks>
+              <para>
+                Use the policy by passing <see cref="M:PresentationTheme.Aero.AeroThemePolicy.GetCurrentThemeUri"/> to
+                <see cref="M:PresentationTheme.Aero.ThemeManager.SetPresentationFrameworkTheme(PresentationTheme.Aero.IThemePolicy)"/>
+                or <see cref="M:PresentationTheme.Aero.ThemeManager.SetTheme(System.Reflection.Assembly,PresentationTheme.Aero.IThemePolicy)"/>.
+              </para>
+              <para>
+                The policy chooses the following theme resource assemblies:
+                <list type="table">
+                  <item>
+                    <term>Windows 10 with Aero theme</term>
+                    <description><c>PresentationTheme.Aero.Win10.dll</c></description>
+                  </item>
+                  <item>
+                    <term>Windows 10 with AeroLite theme</term>
+                    <description><c>PresentationTheme.AeroLite.Win10.dll</c></description>
+                  </item>
+                  <item>
+                    <term>Windows 10 in high contrast mode</term>
+                    <description>
+                      <c>PresentationTheme.HighContrast.Win10.dll</c>
+                    </description>
+                  </item>
+                  <item>
+                    <term>Other Windows versions</term>
+                    <description>Fallback to default theme</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.Aero.AeroThemePolicy.GetCurrentThemeUri">
+            <summary>
+              Builds the pack <see cref="T:System.Uri"/> for the theme resources matching
+              the current system theme and Windows version.
+            </summary>
+            <returns>
+              An absolute pack <see cref="T:System.Uri"/> to a <see cref="T:System.Windows.ResourceDictionary"/>
+              with the theme resources. Returns <see langword="null"/> if the
+              current system theme or Windows version are not supported.
+            </returns>
+        </member>
+        <member name="M:PresentationTheme.Aero.AeroThemePolicy.GetThemeResourceName(System.Version,System.String,System.String,System.Boolean)">
+            <summary>
+              Gets theme resource name matching the current system theme and
+              Windows version.
+            </summary>
+            <param name="osVersion">The Windows version.</param>
+            <param name="themeName">The system theme name.</param>
+            <param name="themeColor">The system theme color.</param>
+            <param name="highContrast">
+              Indicates whether Windows is in high contrast mode.
+            </param>
+            <returns>
+              An absolute pack <see cref="T:System.Uri"/> to a <see cref="T:System.Windows.ResourceDictionary"/>
+              with the theme resources.
+            </returns>
+            <returns>
+              The theme resource name. Returns <see langword="null"/> if the
+              current system theme or Windows version are not supported.
+            </returns>
+        </member>
+        <member name="T:PresentationTheme.Aero.IThemePolicy">
+            <summary>
+              Defines which theme resources are used for a WPF control assembly.
+            </summary>
+            <seealso cref="M:PresentationTheme.Aero.ThemeManager.SetTheme(System.Reflection.Assembly,PresentationTheme.Aero.IThemePolicy)"/>
+        </member>
+        <member name="P:PresentationTheme.Aero.IThemePolicy.MergeWithBaseResources">
+            <summary>
+              Gets or sets a value indicating whether the resources provided by
+              <see cref="M:PresentationTheme.Aero.IThemePolicy.GetCurrentThemeUri"/> are merged with the base resources
+              of the assembly this policy is used for.
+            </summary>
+            <value>
+              <see langword="true"/> to merge the resources with the base resources.
+              The actual theme resource dictionary provided to WPF will have the
+              base resources and the resources provided by this policy as merged
+              resource dictionaries. <see langword="false"/> to replace the base
+              resources and only use the resources provided by this policy. In
+              this case ensure that all expected resource keys are present.
+            </value>
+        </member>
+        <member name="M:PresentationTheme.Aero.IThemePolicy.GetCurrentThemeUri">
+            <summary>
+              Gets the pack <see cref="T:System.Uri"/> to the location of the theme resource
+              dictionary to use. This method will be invoked again to get an
+              updated resource URI in case the system theme has changed. If the
+              method returns <see langword="null"/> the default theme resources
+              are used.
+            </summary>
+        </member>
+        <member name="T:PresentationTheme.Aero.PackUriUtils">
+            <summary>
+              Contains utilities for WPF Pack URIs.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.Aero.PackUriUtils.ContentFileAuthority">
+            <summary>
+              Gets the Pack URI authority for content files.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.Aero.PackUriUtils.MakeContentPackUri(System.Reflection.AssemblyName,System.String)">
+            <summary>Creates a Pack URI for a content file.</summary>
+            <param name="assemblyName">
+              The assembly name where the content resides.
+            </param>
+            <param name="path">The relative pack URI of the file.</param>
+            <returns>An absolute content file Pack URI.</returns>
+        </member>
+        <member name="T:PresentationTheme.Aero.SystemVisualStateManager">
+            <summary>
+              Provides an extended <see cref="T:System.Windows.VisualStateManager"/> that honors
+              system-wide animation settings and hardware capabilities. Animations
+              are used by default if:
+              <list type="bullet">
+                <item>
+                  <description>
+                    <see cref="P:System.Windows.SystemParameters.ClientAreaAnimation"/> is
+                    <see langword="true"/>, and
+                  </description>
+                </item>
+                <item>
+                  <description>
+                    <see cref="P:System.Windows.Media.RenderCapability.Tier"/> is <c>1</c> or higher.
+                  </description>
+                </item>
+              </list>
+              Animations can be forcibly enabled or disabled regardless of system
+              settings by setting <see cref="P:PresentationTheme.Aero.SystemVisualStateManager.UseAnimationsOverride"/>. Use
+              <see cref="P:PresentationTheme.Aero.SystemVisualStateManager.Instance"/> to retrieve a shared instance of the state
+              manager.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.Aero.SystemVisualStateManager.Instance">
+            <summary>
+              Gets the global instance of the <see cref="T:PresentationTheme.Aero.SystemVisualStateManager"/>.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.Aero.SystemVisualStateManager.Animates">
+            <summary>
+              Gets a value indicating whether animations are used for state
+              transitions.
+            </summary>
+            <seealso cref="P:PresentationTheme.Aero.SystemVisualStateManager.UseAnimationsOverride"/>
+        </member>
+        <member name="E:PresentationTheme.Aero.SystemVisualStateManager.AnimatesChanged">
+            <summary>
+              Occurs when the value of the <see cref="P:PresentationTheme.Aero.SystemVisualStateManager.Animates"/> property has
+              changed.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.Aero.SystemVisualStateManager.UseAnimationsOverride">
+            <summary>
+              Gets or sets a value determining whether animations are forcibly
+              enabled or disabled.
+            </summary>
+            <value>
+              <see langword="true"/> to forcibly enable animations.
+              <see langword="false"/> to disable animations. Use <see langword="null"/>
+              to automatically determine whether animations should be used.
+            </value>
+        </member>
+        <member name="M:PresentationTheme.Aero.SystemVisualStateManager.GoToStateCore(System.Windows.FrameworkElement,System.Windows.FrameworkElement,System.String,System.Windows.VisualStateGroup,System.Windows.VisualState,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PresentationTheme.Aero.TextBoxService">
+            <summary>
+              Provides various extensions for <see cref="T:System.Windows.Controls.TextBox"/> controls.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.Aero.TextBoxService.ViewMarginProperty">
+            <summary>
+              Identifies the ViewMargin dependency property.
+            </summary>
+            <remarks>
+              <see cref="T:System.Windows.Controls.TextBox"/> controls have a hardcoded margin of (0;2).
+              Setting this attached property on a <see cref="T:System.Windows.Controls.TextBox"/> allows
+              changing this margin.
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.Aero.TextBoxService.GetViewMargin(System.Windows.DependencyObject)">
+            <summary>
+              Gets the value of the attached <see cref="F:PresentationTheme.Aero.TextBoxService.ViewMarginProperty"/>
+              for a specified <see cref="T:System.Windows.DependencyObject"/>.
+            </summary>
+            <param name="d">
+              The <see cref="T:System.Windows.DependencyObject"/> from which the property value
+              is read.
+            </param>
+            <returns>
+              The view margin for the <see cref="T:System.Windows.DependencyObject"/>.
+            </returns>
+        </member>
+        <member name="M:PresentationTheme.Aero.TextBoxService.SetViewMargin(System.Windows.DependencyObject,System.Nullable{System.Windows.Thickness})">
+            <summary>
+              Sets the value of the attached <see cref="F:PresentationTheme.Aero.TextBoxService.ViewMarginProperty"/> to
+              a specified <see cref="T:System.Windows.DependencyObject"/>.
+            </summary>
+            <param name="d">
+              The <see cref="T:System.Windows.DependencyObject"/> to which the property is attached.
+            </param>
+            <param name="value">The view margin.</param>
+        </member>
+        <member name="T:PresentationTheme.Aero.ThemeManager">
+            <summary>
+              Allows overriding WPF theme resources.
+            </summary>
+            <remarks>
+              WPF does not provide a way to replace the theme resources for system
+              controls (i.e., those contained in the PresentationFramework assembly).
+              Providing styles with proper type-keys in the resource inheritance
+              tree or application-resources is not enough since those are skipped
+              when looking up implicit base styles (i.e., for styles without explicit
+              <see cref="P:System.Windows.Style.BasedOn"/>). This class uses reflection to manipulate
+              the internal dictionaries WPF uses to store theme resources.
+            </remarks>
+        </member>
+        <member name="E:PresentationTheme.Aero.ThemeManager.ThemeChanged">
+            <summary>
+              Occurs following a system theme change event. Examples of theme
+              change events are the activation of a theme, the deactivation of a
+              theme, or a transition from one theme to another.
+            </summary>
+            <remarks>
+              Corresponds the the native <b>WM_THEMECHANGED</b> message.
+            </remarks>
+        </member>
+        <member name="P:PresentationTheme.Aero.ThemeManager.IsOperational">
+            <summary>
+              Gets a value indicating whether the <see cref="T:PresentationTheme.Aero.ThemeManager"/> can
+              manipulate internal WPF data structures. When <see langword="false"/>
+              <see cref="M:PresentationTheme.Aero.ThemeManager.SetTheme(System.Reflection.Assembly,PresentationTheme.Aero.IThemePolicy)"/> and similar functions
+              will always return <see langword="false"/>. This indicates that
+              internal framework types may have changed.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeManager.Install">
+            <summary>
+              Installs the theme manager.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+              The <see cref="T:PresentationTheme.Aero.ThemeManager"/> is not operational, i.e.
+              <see cref="P:PresentationTheme.Aero.ThemeManager.IsOperational"/> is <see langword="false"/>.
+            </exception>
+            <remarks>
+              Hooks into the internal system resource loading machinery via splicing
+              (i.e., patching code at runtime). This enables advanced theme resource
+              resolution for all assemblies without proactively setting custom
+              policies.
+            </remarks>
+            <seealso cref="M:PresentationTheme.Aero.ThemeManager.Uninstall"/>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeManager.Uninstall">
+            <summary>
+              Uninstalls the theme manager.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+              The <see cref="T:PresentationTheme.Aero.ThemeManager"/> is not operational, i.e.
+              <see cref="P:PresentationTheme.Aero.ThemeManager.IsOperational"/> is <see langword="false"/>.
+            </exception>
+            <seealso cref="M:PresentationTheme.Aero.ThemeManager.Install"/>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeManager.SetPresentationFrameworkTheme(System.Uri)">
+            <summary>
+              Sets the theme resources for the PresentationFramework assembly.
+            </summary>
+            <param name="themeUri">
+              The pack <see cref="T:System.Uri"/> to the location of the theme resource
+              dictionary to use.
+            </param>
+            <returns>
+              <see langword="true"/> on success; otherwise <see langword="false"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+              <paramref name="themeUri"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeManager.SetPresentationFrameworkTheme(PresentationTheme.Aero.IThemePolicy)">
+            <summary>
+              Sets the theme resources for the PresentationFramework assembly.
+            </summary>
+            <param name="themePolicy">The theme policy to use.</param>
+            <returns>
+              <see langword="true"/> on success; otherwise <see langword="false"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+              <paramref name="themePolicy"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeManager.SetPresentationFrameworkTheme(System.Func{System.Uri})">
+            <summary>
+              Sets the theme resources for the PresentationFramework assembly.
+            </summary>
+            <param name="themeUriProvider">
+              A delegate providing the pack <see cref="T:System.Uri"/> to the location of
+              the theme resource dictionary to use. The delegate will be invoked
+              again to get an updated resource URI in case the system theme has
+              changed. If the delegate returns <see langword="null"/> the default
+              theme resources are used.
+            </param>
+            <returns>
+              <see langword="true"/> on success; otherwise <see langword="false"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+              <paramref name="themeUriProvider"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeManager.ClearPresentationFrameworkTheme">
+            <summary>
+              Clears the theme resources for the PresentationFramework assembly.
+            </summary>
+            <returns>
+              <see langword="true"/> on success; otherwise <see langword="false"/>.
+            </returns>
+            <remarks>
+              Unless explicitly overridden again (using
+              <see cref="M:PresentationTheme.Aero.ThemeManager.SetTheme(System.Reflection.Assembly,PresentationTheme.Aero.IThemePolicy)"/> or similar), the
+              next time a resource is looked up the default theme resources are
+              loaded again.
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeManager.SetTheme(System.Reflection.Assembly,PresentationTheme.Aero.IThemePolicy)">
+            <summary>
+              Sets the theme resources for the specified assembly.
+            </summary>
+            <param name="assembly">
+              An <see cref="T:System.Reflection.Assembly"/> containing WPF controls.
+            </param>
+            <param name="themePolicy">The theme policy to use.</param>
+            <returns>
+              <see langword="true"/> on success; otherwise <see langword="false"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+              <paramref name="assembly"/> or <paramref name="themePolicy"/> are
+              <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeManager.SetTheme(System.Reflection.Assembly,System.Func{System.Uri})">
+            <summary>
+              Sets the theme resources for the specified assembly.
+            </summary>
+            <param name="assembly">
+              An <see cref="T:System.Reflection.Assembly"/> containing WPF controls.
+            </param>
+            <param name="themeUriProvider">
+              A delegate providing the pack <see cref="T:System.Uri"/> to the location of
+              the theme resource dictionary to use. The delegate will be invoked
+              again to get an updated resource URI in case the system theme has
+              changed. If the delegate returns <see langword="null"/> the default
+              theme resources are used.
+            </param>
+            <returns>
+              <see langword="true"/> on success; otherwise <see langword="false"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+              <paramref name="assembly"/> or <paramref name="themeUriProvider"/>
+              are <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeManager.ClearTheme(System.Reflection.Assembly)">
+            <summary>
+              Clears the theme resources for the specified assembly.
+            </summary>
+            <param name="assembly">
+              An <see cref="T:System.Reflection.Assembly"/> containing WPF controls.
+            </param>
+            <returns>
+              <see langword="true"/> on success; otherwise <see langword="false"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+              <paramref name="assembly"/> is <see langword="null"/>.
+            </exception>
+            <remarks>
+              Unless explicitly overridden again (using
+              <see cref="M:PresentationTheme.Aero.ThemeManager.SetTheme(System.Reflection.Assembly,PresentationTheme.Aero.IThemePolicy)"/> or similar), the
+              next time a resource is looked up the default theme resources are
+              loaded again.
+            </remarks>
+        </member>
+        <member name="T:PresentationTheme.Aero.TreeViewItemLevelConverter">
+            <summary>
+              Converts a <see cref="T:System.Windows.Controls.TreeViewItem"/> to its level in the hierarchy of
+              its <see cref="T:System.Windows.Controls.TreeView"/>.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.Aero.TreeViewItemLevelConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+              Converts a <see cref="T:System.Windows.Controls.TreeViewItem"/> to its level in the hierarchy
+              of its <see cref="T:System.Windows.Controls.TreeView"/>. Also sets the
+              <see cref="F:PresentationTheme.Aero.TreeViewService.ItemLevelProperty"/> on each converted
+              <see cref="T:System.Windows.Controls.TreeViewItem"/>.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">
+              The type of the binding target property.
+            </param>
+            <param name="parameter">
+              An optional <see cref="T:System.Int32"/> or <see cref="T:System.Double"/> factor.
+            </param>
+            <param name="culture">
+              The culture to use in the converter. <b>Not used.</b>
+            </param>
+            <returns>
+              The level of the <see cref="T:System.Windows.Controls.TreeViewItem"/>, multiplied by the
+              factor specified by <paramref name="parameter"/> if provided. The
+              level of root items is 0.
+            </returns>
+        </member>
+        <member name="T:PresentationTheme.Aero.ThemeOptions">
+            <summary>Provides options to customize theme styles.</summary>
+        </member>
+        <member name="F:PresentationTheme.Aero.ThemeOptions.UseExplorerStyleProperty">
+            <summary>
+              Identifies the UseExplorerStyle attached dependency property.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeOptions.GetUseExplorerStyle(System.Windows.Controls.Control)">
+            <summary>
+              Gets a value indicating whether a <see cref="T:System.Windows.Controls.Control"/> should use
+              the Explorer style if supported.
+            </summary>
+            <param name="control">
+              The control from which to read the property value.
+            </param>
+            <remarks>
+              Supported controls are <see cref="T:System.Windows.Controls.ListView"/> and <see cref="T:System.Windows.Controls.TreeView"/>.
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.Aero.ThemeOptions.SetUseExplorerStyle(System.Windows.Controls.Control,System.Boolean)">
+            <summary>
+              Sets a value indicating whether a <see cref="T:System.Windows.Controls.Control"/> should use
+              the Explorer style if supported.
+            </summary>
+            <param name="control">
+              The control on which to set the attached property.
+            </param>
+            <param name="value">The property value to set.</param>
+            <remarks>
+              Supported controls are <see cref="T:System.Windows.Controls.ListView"/> and <see cref="T:System.Windows.Controls.TreeView"/>.
+            </remarks>
+        </member>
+        <member name="T:PresentationTheme.Aero.TreeViewService">
+            <summary>
+              Provides attached options for the <see cref="T:System.Windows.Controls.TreeView"/> control.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.Aero.TreeViewService.ItemLevelPropertyKey">
+            <summary>
+              Identifies the ItemLevel read-only attached dependency property
+              key.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.Aero.TreeViewService.ItemLevelProperty">
+            <summary>
+              Identifies the ItemLevel read-only attached dependency property.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.Aero.TreeViewService.GetItemLevel(System.Windows.DependencyObject)">
+            <summary>Gets the item level.</summary>
+        </member>
+        <member name="M:PresentationTheme.Aero.TreeViewService.SetItemLevel(System.Windows.DependencyObject,System.Int32)">
+            <summary>Sets the item level.</summary>
+        </member>
+        <member name="F:PresentationTheme.Aero.TreeViewService.FullRowSelectProperty">
+            <summary>
+              Identifies the FullRowSelect attached dependency property.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.Aero.TreeViewService.GetFullRowSelect(System.Windows.Controls.TreeView)">
+            <summary>
+              Gets a flag indicating whether a <see cref="T:System.Windows.Controls.TreeView"/> style
+              should use full-row selection if supported.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.Aero.TreeViewService.SetFullRowSelect(System.Windows.Controls.TreeView,System.Boolean)">
+            <summary>
+              Sets a flag indicating whether a <see cref="T:System.Windows.Controls.TreeView"/> style
+              should use full-row selection if supported.
+            </summary>
+        </member>
+    </members>
+</doc>

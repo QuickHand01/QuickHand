@@ -1,0 +1,27 @@
+﻿<Window x:Class="QuickHand.View.ChangeKeyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickHand.View"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterOwner"
+        Title="단축키" Width="200" SizeToContent="Height" Icon="/QuickHand;component/quickhand.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="단축키 입력"/>
+        <TextBox x:Name="tbShortcut" Grid.Row="1" Grid.ColumnSpan="2" Margin="5" PreviewKeyDown="ShortcutTextBox_PreviewKeyDown"></TextBox>
+        <Button x:Name="btnSave" Grid.Row="2" Grid.Column="0" Margin="5" Click="btnSave_Click">저장</Button>
+        <Button x:Name="btnCancel" Grid.Row="2" Grid.Column="1" Margin="5" Click="btnCancel_Click">취소</Button>
+        
+    </Grid>
+</Window>

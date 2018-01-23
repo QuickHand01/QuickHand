@@ -1,0 +1,19 @@
+﻿<Window x:Class="QuickHand.View.DonationDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickHand.View"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        Title="QuickHand Donation" SizeToContent="Height" Width="400" Icon="/QuickHand;component/quickhand.ico">
+    <Grid>
+        <StackPanel>
+            <Label Content="여러분의 기부가 개발자에게 큰 도움이 됩니다."></Label>
+            <Label Content="QuickHand를 이용하여 크게 한번 드셨다면 크게 한턱 부탁드립니다."></Label>
+            <Label Content="비트코인 지갑 주소 : "></Label>
+            <TextBox Margin="5,0" Text="3Gj4eq4LHarhhE9LC3JpR8rLGdktJL1coY" IsReadOnly="True"/>
+            <Button x:Name="btnOk" Margin="5" Content="확인" Click="btnOk_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

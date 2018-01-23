@@ -1,0 +1,1178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PresentationTheme.AeroLite.Win10</name>
+    </assembly>
+    <members>
+        <member name="T:PresentationTheme.AeroLite.Win10.AeroLiteWin10Theme">
+            <summary>AeroLite Windows 10 Theme</summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.AeroLiteWin10Theme.ResourceUri">
+            <summary>
+              Gets the Pack <see cref="T:System.Uri"/> for the theme resources.
+            </summary>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.AutoDropShadowPopup">
+            <summary>
+              A <see cref="T:System.Windows.Controls.Primitives.Popup"/> that automatically adds a
+              <see cref="T:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome"/> around its <see cref="P:System.Windows.Controls.Primitives.Popup.Child"/>
+              element.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.AutoDropShadowPopup.ShadowMarginProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.AutoDropShadowPopup.ShadowMargin"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.AutoDropShadowPopup.ShadowMargin">
+            <summary>
+              Gets or sets the <see cref="P:System.Windows.FrameworkElement.Margin"/> of
+              the <see cref="T:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome"/>.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.AutoDropShadowPopup.ShadowColorProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.AutoDropShadowPopup.ShadowColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.AutoDropShadowPopup.ShadowColor">
+            <summary>
+              Gets or sets the <see cref="P:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.Color"/> of the
+              <see cref="T:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome"/>.
+            </summary>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.ButtonChrome">
+            <summary>
+              Creates a theme-specific look for <see cref="T:System.Windows.Controls.Button"/> elements.
+            </summary>
+            <remarks>
+              <para>
+                The actual appearance of a <see cref="T:System.Windows.Controls.Button"/> is dependent on which
+                theme is active on the user's system. The properties of this class
+                allow WPF to set the appearance based on the current theme.
+              </para>
+              <para>
+                <see cref="T:PresentationTheme.AeroLite.Win10.ButtonChrome"/> does not actually render a button but
+                instead provides visual states allowing its <see cref="P:System.Windows.Controls.Control.Template"/>
+                to accurately render the appearance of buttons.
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderEnabledProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderEnabled"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderEnabled">
+            <summary>
+              Gets or sets a value indicating whether the button chrome should
+              render an enabled state.
+            </summary>
+            <value>
+              <see langword="true"/> if the button chrome appears enabled; otherwise
+              <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderEnabledProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderHotProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderHot"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderHot">
+            <summary>
+              Gets or sets a value indicating whether the button chrome should
+              render a hot state (i.e., as if the mouse is over it).
+            </summary>
+            <value>
+              <see langword="true"/> if the button chrome appears as if the mouse
+              is over it; otherwise <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderHotProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderPressedProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderPressed"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderPressed">
+            <summary>
+              Gets or sets a value indicating whether the button chrome should
+              render a pressed state.
+            </summary>
+            <value>
+              <see langword="true"/> if the button chrome appears pressed; otherwise
+              <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderPressedProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderFocusedProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderFocused"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderFocused">
+            <summary>
+              Gets or sets a value indicating whether the button chrome shows a
+              focused state.
+            </summary>
+            <value>
+              <see langword="true"/> if the button chrome appears focused; otherwise
+              <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderFocusedProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderDefaultedProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderDefaulted"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderDefaulted">
+            <summary>
+              Gets or sets whether the button chrome shows a defaulted state.
+            </summary>
+            <value>
+              <see langword="true"/> if the button chrome appears defauled; otherwise
+              <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.ButtonChrome.RenderDefaultedProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.ButtonChrome.OnApplyTemplate">
+            <inheritdoc/>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.ButtonChrome.ChangeVisualState(System.Boolean)">
+            <summary>Changes the visual state of the button chrome.</summary>
+            <param name="useTransitions">
+              <see langword="true"/> to use a <see cref="T:System.Windows.VisualTransition"/>
+              object to transition between states; otherwise <see langword="false"/>.
+            </param>
+            <seealso cref="M:System.Windows.VisualStateManager.GoToState(System.Windows.FrameworkElement,System.String,System.Boolean)"/>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.DoubleUtil.DBL_EPSILON">
+            <devdoc>Smallest such that 1.0+DBL_EPSILON! = 1.0</devdoc>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.DoubleUtil.AreClose(System.Double,System.Double)">
+            <summary>
+              Returns whether or not two doubles are "close". That is, whether
+              or not they are within epsilon of each other. Note that this epsilon
+              is proportional to the numbers themselves to that AreClose survives
+              scalar multiplication.
+            </summary>
+            <param name="value1">The first double to compare.</param>
+            <param name="value2">The second double to compare.</param>
+            <returns>bool - the result of the AreClose comparision.</returns>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.DoubleUtil.LessThan(System.Double,System.Double)">
+            <summary>
+              LessThan - Returns whether or not the first double is less than
+              the second double. That is, whether or not the first is strictly
+              less than *and* not within epsilon of the other number. Note that
+              this epsilon is proportional to the numbers themselves to that
+              AreClose survives scalar multiplication.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>The result of the comparison.</returns>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.DoubleUtil.GreaterThan(System.Double,System.Double)">
+            <summary>
+              Returns whether or not the first double is greater than the second
+              double. That is, whether or not the first is strictly greater than
+              *and* not within epsilon of the other number. Note that this epsilon
+              is proportional to the numbers themselves to that AreClose survives
+              scalar multiplication.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>The result of the comparison.</returns>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.DoubleUtil.LessThanOrClose(System.Double,System.Double)">
+            <summary>
+              Returns whether or not the first double is less than or close to
+              the second double. That is, whether or not the first is strictly
+              less than or within epsilon of the other number. Note that this
+              epsilon is proportional to the numbers themselves to that AreClose
+              survives scalar multiplication.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>The result of the comparison.</returns>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.DoubleUtil.GreaterThanOrClose(System.Double,System.Double)">
+            <summary>
+              GreaterThanOrClose - Returns whether or not the first double is
+              greater than or close to the second double. That is, whether or
+              not the first is strictly greater than or within epsilon of the
+              other number. Note that this epsilon is proportional to the numbers
+              themselves to that AreClose survives scalar multiplication.
+            </summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>The result of the GreaterThanOrClose comparision.</returns>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.EqualsConverter">
+            <summary>
+              Converts an array of objects to a boolean specifying whether all objects
+              are equal.
+            </summary>
+            <example>
+              The following <see cref="T:System.Windows.DataTrigger"/> checks whether the Value
+              property is equal to the Maximum property.
+              <code>
+                &lt;theme:EqualsConverter x:Key="EqualsConverter"/&gt;
+                &lt;DataTrigger Value="True"&gt;
+                  &lt;DataTrigger.Binding&gt;
+                    &lt;MultiBinding Converter="{StaticResource EqualsConverter}"&gt;
+                      &lt;Binding Path="Value" RelativeSource="{RelativeSource Self}"/&gt;
+                      &lt;Binding Path="Maximum" RelativeSource="{RelativeSource Self}"/&gt;
+                    &lt;/MultiBinding&gt;
+                  &lt;/DataTrigger.Binding&gt;
+                &lt;/DataTrigger&gt;
+              </code>
+            </example>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.EqualsConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+              Converts an array of objects to a boolean specifying whether all
+              objects are equal.
+            </summary>
+            <param name="values">The array of values.</param>
+            <param name="targetType">
+              The type of the binding target property.
+            </param>
+            <param name="parameter">
+              The converter parameter to use. <b>Not used.</b>
+            </param>
+            <param name="culture">
+              The culture to use in the converter. <b>Not used.</b>
+            </param>
+            <returns>
+              <see langword="true"/> if all objects in <paramref name="values"/>
+              are equal; otherwise <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.GroupBoxBorder">
+            <summary>
+              Creates a theme-specific look for <see cref="T:System.Windows.Controls.GroupBox"/> elements.
+            </summary>
+            <remarks>
+              The actual appearance of a <see cref="T:System.Windows.Controls.GroupBox"/> is dependent on which
+              theme is active on the user's system. The properties of this class
+              allow WPF to set the appearance based on the current theme.
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.GroupBoxBorder.OnRender(System.Windows.Media.DrawingContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.HeaderChrome">
+            <summary>Creates the theme specific-look for headers.</summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.HeaderChrome.IsHoveredProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.HeaderChrome.IsHovered"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.HeaderChrome.IsHovered">
+            <summary>
+              Gets or sets a value that indicates whether the header appears as
+              if the mouse pointer is moved over it.
+            </summary>
+            <value>
+              <see langword="true"/> if the header appears as if the mouse pointer
+              is moved over it; otherwise, <see langword="false"/>. The registered
+              default is <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.IsHoveredProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.HeaderChrome.IsPressedProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.HeaderChrome.IsPressed"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.HeaderChrome.IsPressed">
+            <summary>
+              Gets or sets a value that indicates whether the header appears
+              pressed.
+            </summary>
+            <value>
+              <see langword="true"/> if the header appears pressed; otherwise,
+              <see langword="false"/>. The registered default is <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.IsPressedProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>,
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsArrange"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.HeaderChrome.IsClickableProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.HeaderChrome.IsClickable"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.HeaderChrome.IsClickable">
+            <summary>
+              Gets or sets a value that indicates whether the header is clickable.
+            </summary>
+            <value>
+              <see langword="true"/> if the header is clickable; otherwise,
+              <see langword="false"/>. The registered default is <see langword="true"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.IsClickableProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>,
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsArrange"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.HeaderChrome.SortDirectionProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.HeaderChrome.SortDirection"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.HeaderChrome.SortDirection">
+            <summary>
+              Gets or sets the header sort direction.
+            </summary>
+            <value>
+              One of the enumeration values that indicates which direction the
+              column is sorted. The registered default is <see langword="null"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.SortDirectionProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.HeaderChrome.IsSelectedProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.HeaderChrome.IsSelected"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.HeaderChrome.IsSelected">
+            <summary>
+              Gets or sets a value that indicates whether the header appears
+              selected.
+            </summary>
+            <value>
+              <see langword="true"/> if the header appears selected; otherwise,
+              <see langword="false"/>. The registered default is <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.IsSelectedProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.HeaderChrome.OrientationProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.HeaderChrome.Orientation"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.HeaderChrome.Orientation">
+            <summary>
+              Gets or sets whether the header renders in the vertical direction,
+              as a column header, or horizontal direction, as a row header.
+            </summary>
+            <value>
+              One of the enumeration values that indicates which direction the
+              header renders. The registered default is
+              <see cref="F:System.Windows.Controls.Orientation.Vertical"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.OrientationProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.HeaderChrome.SeparatorBrushProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.HeaderChrome.SeparatorBrush"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.HeaderChrome.SeparatorBrush">
+            <summary>
+              Gets or sets the brush that draws the separation between headers.
+            </summary>
+            <value>
+              The brush that draws the separation between headers. The registered
+              default is <see langword="null"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.SeparatorBrushProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>,
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.HeaderChrome.SeparatorVisibilityProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.HeaderChrome.SeparatorVisibility"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.HeaderChrome.SeparatorVisibility">
+            <summary>
+              Gets or sets a value that indicates whether the separation between
+              headers is visible.
+            </summary>
+            <value>
+              One of the enumeration values that indicates whether the separator
+              is visible. The registered default is <see cref="F:System.Windows.Visibility.Visible"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.SeparatorVisibilityProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.HeaderChrome.BorderVisibilityProperty">
+            <summary>
+              Identifies the <see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.BorderVisibilityProperty"/> dependency
+              property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.HeaderChrome.BorderVisibility">
+            <summary>
+              Gets or sets a value that indicates whether the header shows a
+              border to an adjacent content cell.
+            </summary>
+            <value>
+              One of the enumeration values that indicates whether the border is
+              visible. The registered default is <see cref="F:System.Windows.Visibility.Visible"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.HeaderChrome.BorderVisibilityProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.HeaderChrome.OnRender(System.Windows.Media.DrawingContext)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.HeaderChrome.EnsureCache(System.Int32)">
+            <summary>
+              Creates a cache of frozen Freezable resources for use across all
+              instances of the border.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.HeaderChrome.ReleaseCache">
+            <summary>Releases all resources in the cache.</summary>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.HeaderChrome.GetCachedFreezable(System.Int32)">
+            <summary>Retrieves a cached resource.</summary>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.HeaderChrome.CacheFreezable(System.Windows.Freezable,System.Int32)">
+            <summary>Caches a resources.</summary>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding">
+            <summary>
+              Creates a <see cref="T:System.Windows.Data.Binding"/> that evaluates whether a specific property
+              is less than or equal to a specified <see cref="P:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.Threshold"/>.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.#ctor(System.String)">
+            <summary>
+              Initializes a new instance of the <see cref="T:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding"/>
+              class.
+            </summary>
+            <param name="path">The <see cref="P:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.Path"/> value.</param>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.Threshold">
+            <summary>Gets or sets the threshold.</summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.Path">
+            <summary>
+              Gets or sets the <see cref="P:System.Windows.Data.Binding.Path"/> of the
+              <see cref="T:System.Windows.Data.Binding"/> returned by <see cref="M:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.ProvideValue(System.IServiceProvider)"/>.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.ElementName">
+            <summary>
+              Gets or sets the <see cref="P:System.Windows.Data.Binding.ElementName"/> of the
+              <see cref="T:System.Windows.Data.Binding"/> returned by <see cref="M:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.ProvideValue(System.IServiceProvider)"/>.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.ProvideValue(System.IServiceProvider)">
+            <summary>
+              Returns a <see cref="T:System.Windows.Data.Binding"/> that evaluates whether a specific
+              property is less than or equal to a specified <see cref="P:PresentationTheme.AeroLite.Win10.LessThanOrEqualBinding.Threshold"/>.
+            </summary>
+            <param name="serviceProvider">
+              A service provider helper that can provide services for the markup
+              extension. <b>Not used.</b>
+            </param>
+            <returns>
+              The object value to set on the property where the extension is
+              applied.
+            </returns>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.MenuScrollingEnabledConverter">
+            <summary>
+              Data binding converter to handle whether repeat buttons in scrolling
+              menus are enabled.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.MenuScrollingEnabledConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+              Converts a <see cref="T:System.Windows.Controls.ScrollViewer"/> state
+              to a <see cref="T:System.Boolean"/> value indicating whether a specific scrolled
+              percentage is reached.
+            </summary>
+            <param name="values">
+              <see cref="T:System.Double"/> values indicating the current state of the
+              <see cref="T:System.Windows.Controls.ScrollViewer"/>.
+              <list type="number">
+                <item>
+                  <description>
+                    <see cref="P:System.Windows.Controls.ScrollViewer.VerticalOffset"/>
+                  </description>
+                </item>
+                <item>
+                  <description>
+                    <see cref="P:System.Windows.Controls.ScrollViewer.ExtentHeight"/>
+                  </description>
+                </item>
+                <item>
+                  <description>
+                    <see cref="P:System.Windows.Controls.ScrollViewer.ViewportHeight"/>
+                  </description>
+                </item>
+              </list>
+            </param>
+            <param name="targetType">
+              The type of the binding target property.
+            </param>
+            <param name="parameter">
+              A <see cref="T:System.Double"/> value indicating the scrolled percentage at
+              which the converter returns <see langword="true"/>. Use <c>0.0</c>
+              or <c>100.0</c> to target the beginning or end respectively.
+            </param>
+            <param name="culture">
+              The culture to use in the converter. <b>Not used.</b>
+            </param>
+            <returns>
+              <see langword="true"/> if the <paramref name="values"/> indicate a
+              scrolled percentage that equals the target <paramref name="parameter"/>;
+              otherwise <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.ProgressBarChrome">
+            <summary>
+              Provides improved animation styling for <see cref="T:System.Windows.Controls.ProgressBar"/>
+              controls.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.ProgressBarChrome.#ctor">
+            <summary>
+              Initializes a new instance of the <see cref="T:PresentationTheme.AeroLite.Win10.ProgressBarChrome"/>
+              class.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.ProgressBarChrome.IsIndeterminateProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.ProgressBarChrome.IsIndeterminate"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.ProgressBarChrome.IsIndeterminate">
+            <summary>
+              Gets or sets whether the <see cref="T:PresentationTheme.AeroLite.Win10.ProgressBarChrome"/> shows
+              actual values or generic, continuous progress feedback.
+            </summary>
+            <value>
+              <see langword="false"/> if the <see cref="T:PresentationTheme.AeroLite.Win10.ProgressBarChrome"/>
+              shows actual values; <see langword="true"/> if the
+              <see cref="T:PresentationTheme.AeroLite.Win10.ProgressBarChrome"/> shows generic progress. The default
+              is <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.ProgressBarChrome.IsIndeterminateProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.ProgressBarChrome.OrientationProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.ProgressBarChrome.Orientation"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.ProgressBarChrome.Orientation">
+            <summary>
+              Gets or sets the orientation of the progress bar chrome.
+            </summary>
+            <value>
+              An <see cref="T:System.Windows.Controls.Orientation"/> enumeration
+              value that defines whether the <see cref="T:PresentationTheme.AeroLite.Win10.ProgressBarChrome"/> is
+              displayed horizontally or vertically. The default is
+              <see cref="F:System.Windows.Controls.Orientation.Horizontal"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.ProgressBarChrome.OrientationProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsMeasure"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.ProgressBarChrome.OnApplyTemplate">
+            <inheritdoc/>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.ProgressBarChrome.OnValueChanged(System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.ProgressBarChrome.OnMinimumChanged(System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.ProgressBarChrome.OnMaximumChanged(System.Double,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.RoundingTabPanel">
+            <summary>
+              A <see cref="T:System.Windows.Controls.Primitives.TabPanel"/> that supports
+              <see cref="P:System.Windows.FrameworkElement.UseLayoutRounding"/> and sets the
+              <see cref="T:PresentationTheme.AeroLite.Win10.TabItemKind"/> attached dependency property on contained
+              <see cref="T:System.Windows.Controls.TabItem"/> elements.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.RoundingTabPanel.SelectedTabProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.RoundingTabPanel.SelectedTab"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.RoundingTabPanel.SelectedTab">
+            <summary>
+              Gets or sets the selected tab.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.RoundingTabPanel.TabItemKindProperty">
+            <summary>
+              Identifies the <c>TabItemKind</c> attached dependency property.
+            </summary>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.RoundingTabPanel.GetTabItemKind(System.Windows.Controls.TabItem)">
+            <summary>
+              Gets the <see cref="T:PresentationTheme.AeroLite.Win10.TabItemKind"/> of the specified <see cref="T:System.Windows.Controls.TabItem"/>.
+            </summary>
+            <param name="item">
+              The item from which to read the property value.
+            </param>
+            <returns>
+              The value of the <c>TabItemKind</c> attached dependency property.
+            </returns>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.RoundingTabPanel.SetTabItemKind(System.Windows.Controls.TabItem,PresentationTheme.AeroLite.Win10.TabItemKind)">
+            <summary>
+              Sets the <see cref="T:PresentationTheme.AeroLite.Win10.TabItemKind"/> of the specified <see cref="T:System.Windows.Controls.TabItem"/>.
+            </summary>
+            <param name="item">
+              The item from which to read the property value.
+            </param>
+            <param name="kind">The property value to set.</param>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.RoundingTabPanel.MeasureOverride(System.Windows.Size)">
+            <inheritdoc/>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.RoundingTabPanel.ArrangeOverride(System.Windows.Size)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.TabItemKind">
+            <summary>
+              Specifies the kind of a <see cref="T:System.Windows.Controls.TabItem"/> with respect to a reference
+              tab. The selected tab of a <see cref="T:System.Windows.Controls.TabControl"/> is automatically
+              the reference tab. If a tab row has no selected tab, the last tab is
+              used as reference.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.TabItemKind.Reference">
+            <summary>The tab is the reference tab.</summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.TabItemKind.Leading">
+            <summary>The tab is leading the reference tab.</summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.TabItemKind.Trailing">
+            <summary>The tab is trailing the reference tab.</summary>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome">
+            <summary>
+              Creates a theme specific look for drop shadow effects.
+            </summary>
+            <remarks>
+              The drop shadow effect creates a solid silhouette of the content of
+              the element. This creates the illusion that the content is floating
+              and casting a shadow.
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.ColorProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.Color"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.CornerRadiusProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.CornerRadius"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.Color">
+            <summary>
+              Gets or sets the color used by the drop shadow.
+            </summary>
+            <value>
+              The drop shadow color.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.ColorProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.CornerRadius">
+            <summary>
+              Gets or sets the radii of a rectangle's corners.
+            </summary>
+            <value>
+              The radii of a rectangle's corners.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.CornerRadiusProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.SystemDropShadowChrome.OnRender(System.Windows.Media.DrawingContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.TextBoxChrome">
+            <summary>
+              Creates a theme-specific look for <see cref="T:System.Windows.Controls.TextBox"/> elements.
+            </summary>
+            <remarks>
+              <para>
+                The actual appearance of a <see cref="T:System.Windows.Controls.TextBox"/> is dependent on
+                which theme is active on the user's system. The properties of this
+                class allow WPF to set the appearance based on the current theme.
+              </para>
+              <para>
+                <see cref="T:PresentationTheme.AeroLite.Win10.TextBoxChrome"/> does not actually render a button but
+                instead provides visual states allowing its <see cref="P:System.Windows.Controls.Control.Template"/>
+                to accurately render the appearance of buttons.
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderEnabledProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderEnabled"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderEnabled">
+            <summary>
+              Gets or sets a value indicating whether the textbox chrome should
+              render an enabled state.
+            </summary>
+            <value>
+              <see langword="true"/> if the textbox chrome appears enabled; otherwise
+              <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderEnabledProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderReadOnlyProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderReadOnly"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderReadOnly">
+            <summary>
+              Gets or sets a value indicating whether the textbox chrome should
+              render a read-only state.
+            </summary>
+            <value>
+              <see langword="true"/> if the textbox chrome appears read-only;
+              otherwise <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderReadOnlyProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderHotProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderHot"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderHot">
+            <summary>
+              Gets or sets a value indicating whether the textbox chrome should
+              render a hot state (i.e., as if the mouse is over it).
+            </summary>
+            <value>
+              <see langword="true"/> if the textbox chrome appears as if the mouse
+              is over it; otherwise <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderHotProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderFocusedProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderFocused"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderFocused">
+            <summary>
+              Gets or sets whether the textbox chrome shows a focused state.
+            </summary>
+            <value>
+              <see langword="true"/> if the textbox chrome appears focused; otherwise
+              <see langword="false"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.TextBoxChrome.RenderFocusedProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>None</description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.TextBoxChrome.OnApplyTemplate">
+            <inheritdoc/>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.TextBoxChrome.ChangeVisualState(System.Boolean)">
+            <summary>Changes the visual state of the textbox chrome.</summary>
+            <param name="useTransitions">
+              <see langword="true"/> to use a <see cref="T:System.Windows.VisualTransition"/>
+              object to transition between states; otherwise <see langword="false"/>.
+            </param>
+            <seealso cref="M:System.Windows.VisualStateManager.GoToState(System.Windows.FrameworkElement,System.String,System.Boolean)"/>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.TickBarEx">
+            <summary>
+              A modified <see cref="T:System.Windows.Controls.Primitives.TickBar"/> to match the native theme.
+            </summary>
+        </member>
+        <member name="F:PresentationTheme.AeroLite.Win10.TickBarEx.SelectionTickBrushProperty">
+            <summary>
+              Identifies the <see cref="P:PresentationTheme.AeroLite.Win10.TickBarEx.SelectionTickBrush"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:PresentationTheme.AeroLite.Win10.TickBarEx.SelectionTickBrush">
+            <summary>
+              Gets or sets the <see cref="T:System.Windows.Media.Brush"/> for selection ticks.
+            </summary>
+            <value>
+              The <see cref="T:System.Windows.Media.Brush"/> for selection ticks. The registered default
+              is <see cref="P:System.Windows.Media.Brushes.Black"/>.
+            </value>
+            <remarks>
+              <para>
+                <b>Dependency Property Information</b>
+                <list type="table">
+                  <item>
+                    <term>Identifier field</term>
+                    <description><see cref="F:PresentationTheme.AeroLite.Win10.TickBarEx.SelectionTickBrushProperty"/></description>
+                  </item>
+                  <item>
+                    <term>Metadata properties set to <b>true</b></term>
+                    <description>
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.AffectsRender"/>,
+                      <see cref="P:System.Windows.FrameworkPropertyMetadata.SubPropertiesDoNotAffectRender"/>
+                    </description>
+                  </item>
+                </list>
+              </para>
+            </remarks>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.TickBarEx.OnRender(System.Windows.Media.DrawingContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:PresentationTheme.AeroLite.Win10.TypeOfConverter">
+            <summary>Converts a value to its <see cref="T:System.Type"/>.</summary>
+        </member>
+        <member name="M:PresentationTheme.AeroLite.Win10.TypeOfConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>Converts a value to its <see cref="T:System.Type"/>.</summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">
+              The type of the binding target property.
+            </param>
+            <param name="parameter">
+              The converter parameter to use. <b>Not used.</b>
+            </param>
+            <param name="culture">
+              The culture to use in the converter. <b>Not used.</b>
+            </param>
+            <returns>
+              The <see cref="T:System.Type"/> of <paramref name="value"/> or
+              <see langword="null"/> if <paramref name="value"/> is
+              <see langword="null"/>.
+            </returns>
+        </member>
+    </members>
+</doc>

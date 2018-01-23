@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="QuickHand.View.CommandControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuickHand.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="grdCmd1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="2" Margin="5" BorderThickness="1" Background="#FFF7F7F7" CornerRadius="1" BorderBrush="#FFCCCCCC"></Border>
+        <Viewbox Margin="10,0,0,0" Height="35">
+            <Label Content="{Binding KeyString}" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" MouseLeftButtonUp="Label_MouseLeftButtonUp">
+                <Label.InputBindings>
+                    <MouseBinding Command="{Binding EditCommand}" MouseAction="LeftDoubleClick"/>
+                </Label.InputBindings>
+            </Label>
+        </Viewbox>
+        <ComboBox Grid.Column="1" Margin="10" ItemsSource="{Binding FunctionList}" SelectedItem="{Binding Command}"></ComboBox>
+    </Grid>
+</UserControl>
